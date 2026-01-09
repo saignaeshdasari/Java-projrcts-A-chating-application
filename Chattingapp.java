@@ -140,7 +140,8 @@ public class Chattingapp implements ActionListener {
             Socket s = skt.accept();
 
             DataInputStream din = new DataInputStream(s.getInputStream());
-            otp = new DataOutputStream(s.getOutputStream()); // ✅ assign to static one
+            otp = new DataOutputStream(s.getOutputStream()); 
+ 
 
             while (true) {
                 String msg = din.readUTF();
