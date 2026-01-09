@@ -74,7 +74,7 @@ public class client implements ActionListener {
 
         f.setTitle("Client Chat");
         f.setSize(450, 700);
-        f.setLocation(700, 50); // open on right side of server window
+        f.setLocation(700, 50);
         f.setUndecorated(true);
         f.getContentPane().setBackground(Color.white);
         f.setVisible(true);
@@ -102,7 +102,7 @@ public class client implements ActionListener {
             a1.add(vertical, BorderLayout.PAGE_START);
 
             if (otp != null)
-                otp.writeUTF(out); // send message to server
+                otp.writeUTF(out);
 
             a1.revalidate();
             a1.repaint();
@@ -140,7 +140,7 @@ public class client implements ActionListener {
         try {
             Socket s = new Socket("127.0.0.1", 6001);
             DataInputStream din = new DataInputStream(s.getInputStream());
-            otp = new DataOutputStream(s.getOutputStream()); // ✅ assign to static otp
+            otp = new DataOutputStream(s.getOutputStream()); 
 
             while (true) {
                 String msg = din.readUTF();
