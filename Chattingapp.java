@@ -101,7 +101,7 @@ public class Chattingapp implements ActionListener {
             a1.add(vertical, BorderLayout.PAGE_START);
 
             if (otp != null)
-                otp.writeUTF(out); // send to other side
+                otp.writeUTF(out); 
 
             a1.revalidate();
             a1.repaint();
